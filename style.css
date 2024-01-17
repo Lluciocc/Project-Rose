@@ -3,8 +3,8 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 10%;
     flex-direction: column;
+    gap: 10%;
     background-color: #FCCBC0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em;
@@ -34,19 +34,17 @@ height: 100%;
     height: 35%;
     display: flex;
     flex-direction: column;
-    gap: 10%;
     align-items: center;
+    gap: 10%;
 }
-
-
 
 .username, .password, .submit{
     width: 100%;
     height: 20%;
+    border: none;
     border-radius: 8px;
     font-size: 0.8em;
     background-color: #FBF3F1;
-    border: none;
 }
 
 .submit {
@@ -67,56 +65,85 @@ height: 100%;
     }
 }
 
-.welcome-txt {
+#welcome-txt {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-self: self-start;
     gap: 5%;
-    margin-left: 3%;
+    padding-top: 5%;
+    margin-left: 5%;
     font-size: 0.7em;
 }
 
-#user-txt {
+.user {
     font-weight: bold;
 }
 
 #take-order, #delivery-order {
-    width: 100%;
-    height: 20%;
-    border-radius: 8px;
-    font-size: 0.8em;
-    background-color: #FBF3F1;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     border: none;
+    border-radius: 8px;
+    font-size: 0.55em;
+    background-color: #FBF3F1;
 }
 
-#menu {
-	width: 100%;
-	text-align: center;
-	margin: 0px auto 0;
-	position: absolute;
-	height: 80px;
-	top: 100%;
-	background-color: 
-#CC9966;
+.barre {
+    margin-left: 5%;
+    width: 3px;
+    height: 50%;
+    background-color: black;
+    border-radius: 8px;
 }
 
-#menu ul {
-	padding: 0;
-	list-style: none;
-	margin: 30px 0 0 0;
-	font-family: "Trebuchet MS", Arial;
-	font-size: 15px;
-	text-align: center;
+#take-order p, #delivery-order p {
+    margin-left: 5%;
 }
 
-#menu ul li {
-	display: inline;
-	margin-right: 80px;
-	text-align: center;
+#stock-rose {
+    width: 100%;
+    justify-self: start;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    font-size: 0.6em;
 }
 
-#menu ul li a {
-	text-decoration: none;
-	color: 
-white;
-	text-align: center;
+.icon-rose {
+    width: 100px;
+    height: auto;
+}
+
+#stock-rose p {
+    margin: 0;
+}
+
+.count {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    #welcome-txt {
+        padding-top: 2%;
+        margin-left: 3%;
+        gap: 2%;
+    }
+    #take-order, #delivery-order {
+        width: 60%;
+        font-size: 0.7em;
+    }
+    #take-order p, #delivery-order p {
+        margin: 50px 50px;
+    }
+    #stock-rose {
+        font-size: 0.8em;
+    }
+    .icon-rose {
+        width: 125px;
+        height: auto;
+    }
 }
