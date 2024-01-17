@@ -1,16 +1,22 @@
+const fs = require("fs");
 
+// converting a JS object to JSON
+const user = {
+  id: 1,
+  completeName: "Jennifer Jones",
+  age: 20,
+};
+const data = JSON.stringify(user);
 
-// test du json mais sans json askip mdrrrr
+try {
+  // reading a JSON file synchronously
+  fs.writeFileSync("data.json", data);
+} catch (error) {
+  // logging the error
+  console.error(error);
 
-function handleSubmit(event) {
-    event.preventDefault();
-  
-    const data = new FormData(event.target);
-  
-    const value = data.get('email');
-  
-    console.log({ value });
-  }
-  
-  const form = document.querySelector('form');
-  form.addEventListener('submit', handleSubmit);
+  throw error;
+}
+
+// logging the outcome
+console.log("data.json written correctly");
