@@ -18,21 +18,26 @@ function writeDb(obj, dbName="db.json"){
         return console.log("Impossible d'insérer l'objet dans la base de données.")
     }
 }
+$(function(){
 
-// Tests
-const lucas1 = {
-    nom : "Froehlinger",
-    prenom : "Lucas",
-    classe: "T8"
-}
-const lucas2 = {
-    nom : "Ciarcello",
-    prenom : "Lucas",
-    classe: "2-2"
-}
+    var hauteur = $(window).height(); // ici je récup la hauteur de la fenêtre…
 
-writeDb(lucas1)
-writeDb(lucas2)
-console.log(readDb())
+    $(window).scroll(function () {
+
+        if ($(this).scrollTop() > hauteur) {
+
+            $('#menu').css({
+                'position': 'fixed',
+                'top': '0px'
+            });
+        } else {
+
+            $('#menu').css({
+                'position': 'absolute',
+                'top': '100%'
+            });
+        }
+    });
+})
 
 module.exports = {readDb,writeDb}
