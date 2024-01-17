@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1f8633d3-2fab-4aae-b544-2e66478e7a31" name="Roses" url="http://localhost:8888">
+        <fileTransfer mountedRoot="C:\Users\-Rukaa\Documents\GitHub\Project-Rose" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
