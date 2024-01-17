@@ -38,13 +38,8 @@ $(function(){
             });
         }
     });
-
-    $("#log").delegate("input[type=submit]","click",function(){
-        alert(this.value);
-        return false;
-    });
 })
 
-
+    
 
 module.exports = {readDb,writeDb}

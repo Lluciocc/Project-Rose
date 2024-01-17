@@ -15,13 +15,29 @@
     </header>
 
     <div class="login">
-        <form method="post" id="log"> 
+        <form id="log"> 
             <input class="username" type="text" placeholder="Username">
             <input class="password" type="text" placeholder="Password">
             <input class="submit" type="submit" value="LOGIN">
         </form>
     </div>
 </body>
-
+<script src="script.js" type="text/javascript">
+    let loginForm = document.getElementById("log")
+    $("log").addEventListener("submit",(e) =>{
+        if (username.value == "" || password.value == "") {
+            alert(err)
+        } else {
+            let username = document.getElementsByClassName("username")
+            let password = document.getElementsByClassName("password")
+            let obj = {
+                username: username.value,
+                password: password.value
+            }
+            window.alert(obj)
+            writeDb(obj,"data.json")
+        }
+    });
+</script>
 </html>
       
