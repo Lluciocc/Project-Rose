@@ -20,3 +20,25 @@ try {
 
 // logging the outcome
 console.log("data.json written correctly");
+
+$(function(){
+
+  var hauteur = $(window).height(); // ici je récup la hauteur de la fenêtre…
+
+  $(window).scroll(function () {
+
+    if ($(this).scrollTop() > hauteur) {
+
+      $('#menu').css({
+        'position': 'fixed',
+          'top': '0px'
+      });
+      } else {
+
+        $('#menu').css({
+          'position': 'absolute',
+          'top': '100%'
+        });
+      }
+  });
+})
