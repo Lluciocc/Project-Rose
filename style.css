@@ -53,11 +53,24 @@ height: 100%;
     border: 10px solid #A19B9A;
     font-weight: bold;
     cursor: pointer;
+    /*style du bouton*/
+    background-color: lightgrey;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 3px grey;
+    transform: translateY(-2);
 }
 
 .submit:active {
     transform: scale(0.96);
 }
+
+.submit:hover {
+    transform: scale(1.04)
+}
+
+.submit
 
 @media only screen and (min-width: 768px) {
     .logo {
