@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "font";
+    src: url("/Font/Ronald Mendoya.otf");
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -25,8 +30,8 @@ h1 {
 }
 
 .logo {
-width: 50%;
-height: 100%;
+    width: 50%;
+    height: 100%;
 }
 
 .login {
@@ -59,7 +64,6 @@ height: 100%;
     text-align: center;
     color: black;
     text-shadow: 2px 2px 3px grey;
-    transform: translateY(-2);
 }
 
 .submit:active {
@@ -70,13 +74,12 @@ height: 100%;
     transform: scale(1.04)
 }
 
-.submit
 
 @media only screen and (min-width: 768px) {
-    .logo {
+    .logo{
         width: 200px;
         height: 400px;
-        }
+     }
     
     .login {
         width: 60%;
@@ -92,6 +95,10 @@ height: 100%;
     padding-top: 5%;
     margin-left: 5%;
     font-size: 0.7em;
+}
+
+.title {
+    font-family: font;
 }
 
 .user {
