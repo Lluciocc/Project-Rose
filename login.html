@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
 
 <body>
@@ -22,22 +23,11 @@
         </form>
     </div>
 </body>
-<script src="script.js" type="text/javascript">
-    let loginForm = document.getElementById("log")
-    $("log").addEventListener("submit",(e) =>{
-        if (username.value == "" || password.value == "") {
-            alert(err)
-        } else {
-            let username = document.getElementsByClassName("username")
-            let password = document.getElementsByClassName("password")
-            let obj = {
-                username: username.value,
-                password: password.value
-            }
-            window.alert(obj)
-            writeDb(obj,"data.json")
-        }
-    });
+<script>
+    $( "form" ).on( "submit", function( event ) {
+        alert( $( this ).serializeArray() );
+        event.preventDefault();
+    } );
 </script>
 </html>
       
