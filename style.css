@@ -9,10 +9,12 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 10%;
+    justify-content: space-between;
     background-color: #FCCBC0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -97,7 +99,13 @@ header{
         width: 25%;
         height: auto;
         }
-    }
+}
+
+#error-message {
+    top:50px;
+    transform: translate(-50px);
+} 
+
 
 /*Page HOME*/
 
@@ -118,7 +126,7 @@ header{
 
 #take-order, #delivery-order {
     width: 90%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -220,11 +228,7 @@ header{
     }
 }
 
-#icon-bar{
-    background: whitesmoke;
-}
-
-#error-message {
-    top:50px;
-    transform: translate(-50px);
+footer {
+    width: 100%;
+    background-color: #FBF3F1;
 }
