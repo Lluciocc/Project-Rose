@@ -178,3 +178,8 @@ h1 {
 #navbar {
     margin-left: 100px;
 }
+
+#error-message {
+    top:50px;
+    transform: translate(-50px);
+}

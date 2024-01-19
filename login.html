@@ -18,6 +18,7 @@
         <form>
             <input id="password" type="text" placeholder="Password">
             <input class="submit" type="submit" value="LOGIN">
+            <span id="error-message"></span>
         </form>
     </div>
 </body>
@@ -27,6 +28,11 @@
         const password = document.getElementById("password")
         if (password.value === "roses") {
             window.location.href = "home.html";
+        } else {
+            $("#error-message").text("Plese try again");
+            //$("#error-message").css({
+            //    color: red
+            //})
         }
 
         event.preventDefault();
