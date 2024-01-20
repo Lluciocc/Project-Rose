@@ -7,6 +7,7 @@
     <script src="script.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/Icon/rose_icon.png">
 </head>
 
 <body>
@@ -56,6 +57,7 @@
         <input class="icon-list" id='icon-bar' type="image" src="Images/Icon/menu.png" alt="Icone liste" style="width: 100px;" >
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script>
     $( "form" ).on( "submit", function( event ) {
         //On récupère toutes les infos, à la cool :)
@@ -67,7 +69,8 @@
 
 
         if (int(roses.value) <= 3 && prenom.value !== "" && nom.value !== "") {
-            alert("Super cool :)")
+            alert("Super cool :)");
+            console.log("Super Cool :))");
         } else {
             $("#error-message").text("Plese try again");
             //$("#error-message").css({
