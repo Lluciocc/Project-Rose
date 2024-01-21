@@ -32,7 +32,7 @@ h1 {
     justify-content: start;
 }
 
-header{
+#login-page header{
     width: 100%;
     height: auto;
     display: flex;
@@ -163,39 +163,53 @@ header{
 }
 
 #order-tab, #delivery-tab {
+    width: 95%;
+    height: 70%;
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 70%;
     background-color: #FBF3F1;
     border-radius: 8px;
 }
 
+#order-tab header, #delivery-tab header {
+    width: 100%;
+    height: 10%;
+    align-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
 #order-tab p, #delivery-tab p {
-    justify-self: space-between;
     font-size: 0.5em;
-    justify-self: start;
     margin-left: 5%;
 }
 
 .icon-cross {
-    margin: 5% 5%;
-    width: 10%;
-    height: 8%;
-    justify-self: end;
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
 }
 
-#form-order {
+#order-tab form {
+    width: 100%;
+    height: 80%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 10%;
+}
+
+#order-tab form input, #order-tab form submit {
+    height: 6%;
 }
 
 #stock-rose {
@@ -238,6 +252,12 @@ footer {
     margin: 10px 0 10px;
 }
 
+@media screen and (min-width: 500px) {
+    #order-tab p, #delivery-tab p {
+        font-size: 0.7em;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #welcome-txt {
         padding-top: 2%;
@@ -258,5 +278,9 @@ footer {
     .icon-rose {
         width: 125px;
         height: auto;
+    }
+
+    #order-tab, #delivery-tab {
+        width: 60%;
     }
 }
