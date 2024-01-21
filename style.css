@@ -3,17 +3,20 @@
     src: url("/Font/Ronald Mendoya.otf");
 }
 
+html {
+    overflow-y: hidden;
+}
+
 body {
     height: 100vh;
     margin: 0;
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
     background-color: #FCCBC0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -24,6 +27,10 @@ h1 {
 }
 
 /*Page LOGIN*/
+
+#login-page {
+    justify-content: start;
+}
 
 header{
     width: 100%;
@@ -40,7 +47,8 @@ header{
 
 .login {
     width: 90%;
-    height: 20%;
+    height: 30%;
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +63,12 @@ header{
     font-size: 0.8em;
     background-color: #FBF3F1;
     padding-left: 10px;
+}
+
+#error-message {
+    color: red;
+    font-size: 0.5em;
+    margin: 0 0 0 0;
 }
 
 .submit {
@@ -91,6 +105,7 @@ header{
     
     .login {
         width: 60%;
+        margin-top: 10%;
     }
 }
 
@@ -99,12 +114,11 @@ header{
         width: 25%;
         height: auto;
         }
+    
+    .login {
+        margin-top: 10%;
+    }
 }
-
-#error-message {
-    top:50px;
-    transform: translate(-50px);
-} 
 
 
 /*Page HOME*/
@@ -206,29 +220,43 @@ header{
     font-weight: bold;
 }
 
-@media only screen and (min-width: 768px) {
+footer {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    background-color: #FBF3F1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon-home, .icon-list {
+    width: 20%;
+    height: auto;
+    max-width: 90px;
+    margin: 10px 0 10px;
+}
+
+@media screen and (min-width: 768px) {
     #welcome-txt {
         padding-top: 2%;
         margin-left: 3%;
         gap: 2%;
     }
+
     #take-order, #delivery-order {
         width: 60%;
+        height: 10%;
         font-size: 0.7em;
     }
-    #take-order p, #delivery-order p {
-        margin: 50px 50px;
-    }
+
     #stock-rose {
         font-size: 0.8em;
     }
+
     .icon-rose {
         width: 125px;
         height: auto;
     }
-}
-
-footer {
-    width: 100%;
-    background-color: #FBF3F1;
 }
