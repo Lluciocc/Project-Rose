@@ -1,6 +1,6 @@
 @font-face {
     font-family: "font";
-    src: url("/Font/Ronald Mendoya.otf");
+    src: url("/Font/RonaldMendoya.otf");
 }
 
 html {
@@ -28,6 +28,9 @@ h1 {
 
 /*Page LOGIN*/
 
+.title{
+    font-family: font;
+}
 #login-page {
     justify-content: start;
 }
