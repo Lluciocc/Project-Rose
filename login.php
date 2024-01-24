@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<?php
+$hash = '$2y$10$qHqM69zE9OoR2r.LRd1xjOsuz8B4pHtnPqIDkgRlK8x/SMrddCIfe';
+
+if (password_verify($_POST["password"],$hash)){
+
+    header("Location : https://spcrose.fr/home.php", true, 301);
+    exit();
+}
+
+?>
 <html>
 
 <head>
@@ -16,28 +26,15 @@
         <h1 class="title">SPC Rose</h1>
     </header>
 
-    <form class="login">
-        <input id="password" type="password" placeholder="Password">
+    <form method="post" class="login">
+        <input id="password" type="password" name="password" placeholder="Password">
         <p id="error-message"></p>
         <input class="submit" type="submit" value="LOGIN">
     </form>
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script>
-    $( "form" ).on( "submit", function( event ) {
-        const password = document.getElementById("password")
-        if (password.value === "roses") {
-            window.location.href = "./pages/home.html";
-        } else {
-            $("#error-message").text("Please try again !");
-        }
 
-        document.getElementById("password").value = "";
-        event.preventDefault();
-    } );
-</script>
 
 </html>
       
