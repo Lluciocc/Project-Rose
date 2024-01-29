@@ -1,11 +1,13 @@
 <?php
 $hash = '$2y$10$qHqM69zE9OoR2r.LRd1xjOsuz8B4pHtnPqIDkgRlK8x/SMrddCIfe';
-
 if (password_verify($_POST["password"],$hash)){
+    session_start();
+    $_SESSION["mdp"] = $_POST["password"]
+?>
+    <script>window.location.href = "https://spcrose.fr/home"</script>
 
-    header("Location : https://spcrose.fr/home.php");
+<?php    
 }
-
 ?>
 <!DOCTYPE html>
 <html>
