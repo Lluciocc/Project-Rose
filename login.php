@@ -1,16 +1,14 @@
-<!DOCTYPE html>
 <?php
 $hash = '$2y$10$qHqM69zE9OoR2r.LRd1xjOsuz8B4pHtnPqIDkgRlK8x/SMrddCIfe';
 
 if (password_verify($_POST["password"],$hash)){
 
-    header("Location : https://spcrose.fr/home.php", true, 301);
-    exit();
+    header("Location : https://spcrose.fr/home.php");
 }
 
 ?>
+<!DOCTYPE html>
 <html>
-
 <head>
     <title>Login - SPC Rose</title>
     <link rel="stylesheet" href="style.css">
