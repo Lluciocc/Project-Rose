@@ -1,8 +1,8 @@
 <?php
-$hash = '$2y$10$qHqM69zE9OoR2r.LRd1xjOsuz8B4pHtnPqIDkgRlK8x/SMrddCIfe';
-if (password_verify($_POST["password"],$hash)){
+$blfk = '$2y$10$qHqM69zE9OoR2r.LRd1xjOsuz8B4pHtnPqIDkgRlK8x/SMrddCIfe';
+if (password_verify($_POST["password"],$blfk)){
     session_start();
-    $_SESSION["mdp"] = $_POST["password"]
+    $_SESSION["mdp"] = True
 ?>
     <script>window.location.href = "https://spcrose.fr/home"</script>
 
