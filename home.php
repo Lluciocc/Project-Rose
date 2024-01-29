@@ -1,5 +1,5 @@
 <?php
-include ("login.php");
+session_start();
 if (!isset($_SESSION["mdp"])){
 ?>
     <script>window.location.href = "https://spcrose.fr/login"</script>
