@@ -6,7 +6,7 @@ name: "Deploy Now: Execute Build"
 on:
   workflow_call:
     inputs:
-      site-url: https://spcrose.fr/login
+      site-url:
         required: true
         type: string
       branch-id:
