@@ -81,11 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $roses=$_POST['roses'];
     $horaire=$_POST['horaire']; 
     $salle=$_POST['salle'];
-    echo "<p>$nom, $prenom, $horaire,$salle,$roses<p>";
-    foreach($_POST['command'] as $key=>$val)
-{
-   echo "<p>$val<p>";
-}
+    echo "<div> POST BODY <br>"; 
+    print_r($_POST); 
+    echo "</div>"; 
     $result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')");
 
     
