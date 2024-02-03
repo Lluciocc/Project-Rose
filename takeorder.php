@@ -20,10 +20,10 @@ $roses=$_POST['roses'];
 $horaires=$_POST['horaires']; 
 $salle=$_POST['salle'];
 
-$sql = "INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')";
+$result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')");
 
-if ($conn->query($sql) === TRUE) {
-            echo "Records updated: ";
+if ($result === TRUE) {
+        echo "Records updated: ";
     } else {
         echo "Error: ".$sql."<br>".$conn->error;
     }
