@@ -1,32 +1,11 @@
 <?php
-
 session_start();
 if (!isset($_SESSION["mdp"])){
 ?>
     <script>window.location.href = "https://spcrose.fr/login"</script>
 <?php
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $host_name = 'db5015066517.hosting-data.io';
-    $database = 'dbs12511800';
-    $user_name = 'dbu72595';
-    $password = 'spcWeLoveRosesSkibidi57';
 
-    $link = new mysqli($host_name, $user_name, $password, $database,3306);
-
-    $prenom=$_POST['prenom'];  
-    $nom=$_POST['nom'];
-    $roses=$_POST['roses'];
-    $horaire=$_POST['horaire']; 
-    $salle=$_POST['salle'];
-    echo "<div> POST BODY <br>"; 
-    print_r($_POST); 
-    echo "</div>"; 
-    $result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')");
-
-    
-    $conn->close();
-    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,11 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>Prendre une commande</p>
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideOrder()">
         <form method="post" name="command" id="form-order">
-            <input type="text" id="prenom" placeholder="Prénom">
-            <input type="text" id="nom" placeholder="Nom">
-            <input type="text" id="roses" placeholder="Nombre de roses">
-            <input type="text" id="horaire" placeholder="Horaires">
-            <input type="text" id="salle" placeholder="Salle de classe">
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom">
+            <input type="text" id="nom" name="nom" placeholder="Nom">
+            <input type="text" id="roses" name="roses" placeholder="Nombre de roses">
+            <input type="text" id="horaire" name="horaire" placeholder="Horaires">
+            <input type="text" id="salle" name="salle" placeholder="Salle de classe">
             <input type="submit" id="submit2" placeholder="Submit">
         </form>
     </div>
@@ -88,3 +67,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </footer>
 </body>
 </html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $host_name = 'db5015066517.hosting-data.io';
+    $database = 'dbs12511800';
+    $user_name = 'dbu72595';
+    $password = 'spcWeLoveRosesSkibidi57';
+
+    $link = new mysqli($host_name, $user_name, $password, $database,3306);
+
+    $prenom=$_POST['prenom'];  
+    $nom=$_POST['nom'];
+    $roses=$_POST['roses'];
+    $horaire=$_POST['horaire']; 
+    $salle=$_POST['salle'];
+    echo "<div> POST BODY <br>"; 
+    print_r($_POST); 
+    echo "</div>"; 
+    $result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')");
+
+    
+    $conn->close();
+    }
+?>
