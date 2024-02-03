@@ -12,7 +12,7 @@ $password = 'spcWeLoveRosesSkibidi57';
 
 $link = new mysqli($host_name, $user_name, $password, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
-$rosefetch = $rosequery->fetch_assoc()
+$rosefetch = settype($rosequery->fetch_assoc()["SUM(roses)"],"int");
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +66,7 @@ $rosefetch = $rosequery->fetch_assoc()
         <input class="icon-rose" type="image" src="Images/Icon/icon-rose.png" alt="Icone rose">
         <div>
             <p>STOCK DE ROSES</p>
-            <p class="count">1500</p>
+            <p class="count"><?php echo $rosefetch?></p>
         </div>
     </div>
 
@@ -89,11 +89,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
 
     if ($link->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "Nouvelle commande ajoutée !";
     } else {
     $link->close();
     }
 }
-echo $rosefetch["SUM(roses)"];
+echo $rosefetch;
 ?>
-</html>
