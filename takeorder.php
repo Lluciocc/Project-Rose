@@ -1,6 +1,4 @@
 <?php
-
-
 $dbconnect=mysqli_connect("db5015066517.hosting-data.io","dbu72595","spcWeLoveRosesSkibidi57","dbs12545785",3306);
 
 if ($dbconnect->connect_error) {
