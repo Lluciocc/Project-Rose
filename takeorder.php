@@ -1,9 +1,7 @@
 <?php
 
-$username = "$IONOS_DB_USERNAME";
-$password = "$IONOS_DB_PASSWORD";
 
-$dbconnect=mysqli_connect("localhost",$username,$password,"dbs12545785",3306);
+$dbconnect=mysqli_connect("db5015066517.hosting-data.io","dbu72595","spcWeLoveRosesSkibidi57","dbs12545785",3306);
 
 if ($dbconnect->connect_error) {
     die("Database connection failed: " . $dbconnect->connect_error);
@@ -13,7 +11,7 @@ if(isset($_POST['command'])) {
     $prenom=$_POST['prenom'];
     $nom=$_POST['nom'];
     $roses=$_POST['roses'];
-    $horaires=$_POST['horaires'];
+    $horaires=$_POST['horaires']; 
     $salle=$_POST['salle'];
 
     $sql = "INSERT INTO commandes (nom,prenom,horaire,salle,roses)

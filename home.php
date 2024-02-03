@@ -5,7 +5,6 @@ if (!isset($_SESSION["mdp"])){
     <script>window.location.href = "https://spcrose.fr/login"</script>
 <?php
 }
-
 ?>
 <!DOCTYPE html>
 <html>
