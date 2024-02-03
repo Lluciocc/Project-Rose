@@ -11,7 +11,7 @@ $user_name = 'dbu72595';
 $password = 'spcWeLoveRosesSkibidi57';
 
 $link = new mysqli($host_name, $user_name, $password, $database,3306);
-$rosetotal = 1500-"SELECT SUM(roses) FROM commandes";
+$rosetotal = "SELECT SUM(roses) FROM commandes";
 ?>
 <!DOCTYPE html>
 <html>
