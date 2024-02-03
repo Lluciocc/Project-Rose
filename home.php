@@ -38,7 +38,7 @@ if (!isset($_SESSION["mdp"])){
     <div id="order-tab">
         <p>Prendre une commande</p>
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideOrder()">
-        <form action="takeorder.php" method="post" name="command" id="form-order">
+        <form method="post" name="command" id="form-order">
             <input type="text" id="prenom" placeholder="Prénom">
             <input type="text" id="nom" placeholder="Nom">
             <input type="text" id="roses" placeholder="Nombre de roses">
