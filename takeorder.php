@@ -1,8 +1,16 @@
 <?php
-$dbconnect=mysqli_connect("db5015066517.hosting-data.io","dbu72595","spcWeLoveRosesSkibidi57","dbs12545785",3306);
+ini_set('display_errors', 'on');
+$host_name = 'db5015066517.hosting-data.io';
+$database = 'dbs12511800';
+$user_name = 'dbu72595';
+$password = 'spcWeLoveRosesSkibidi57';
 
-if ($dbconnect->connect_error) {
-    die("Database connection failed: " . $dbconnect->connect_error);
+$link = new mysqli($host_name, $user_name, $password, $database,3306);
+
+if ($link->connect_error) {
+  die('<p>La connexion au serveur MySQL a échoué: '. $link->connect_error .'</p>');
+} else {
+  echo '<p>Connexion au serveur MySQL établie avec succès.</p>';
 }
 
 if(isset($_POST['command'])) {
