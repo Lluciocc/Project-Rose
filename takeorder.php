@@ -17,7 +17,7 @@ if ($link->connect_error) {
 $prenom=$_POST['prenom'];  
 $nom=$_POST['nom'];
 $roses=$_POST['roses'];
-$horaires=$_POST['horaires']; 
+$horaire=$_POST['horaire']; 
 $salle=$_POST['salle'];
 
 $result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')");
