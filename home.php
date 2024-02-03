@@ -65,7 +65,7 @@ $rosetotal = 1500-"SELECT SUM(roses) FROM commandes";
         <input class="icon-rose" type="image" src="Images/Icon/icon-rose.png" alt="Icone rose">
         <div>
             <p>STOCK DE ROSES</p>
-            <p class="count">$rosetotal</p>
+            <?php<p class="count">$rosetotal</p>?>
         </div>
     </div>
 
