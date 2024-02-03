@@ -11,7 +11,8 @@ $user_name = 'dbu72595';
 $password = 'spcWeLoveRosesSkibidi57';
 
 $link = new mysqli($host_name, $user_name, $password, $database,3306);
-$rosetotal = $link->query("SELECT SUM(roses) FROM commandes");
+$rosequery = $link->query("SELECT SUM(roses) FROM commandes");
+$rosefetch = $rosequery->fetch_assoc()
 ?>
 <!DOCTYPE html>
 <html>
@@ -76,7 +77,7 @@ $rosetotal = $link->query("SELECT SUM(roses) FROM commandes");
 </body>
 </html>
 <?php
-echo $rosetotal;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $prenom=$_POST['prenom'];  
@@ -93,5 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $link->close();
     }
 }
+echo $rosefetch["SUM(roses)"];
 ?>
 </html>
