@@ -94,5 +94,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $link->close();
     }
 }
-echo $rosefetch;
 ?>
