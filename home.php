@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $horaire=$_POST['horaire']; 
     $salle=$_POST['salle'];
 
-    $sql = "INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
+    $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
 
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
