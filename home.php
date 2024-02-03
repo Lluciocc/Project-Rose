@@ -84,10 +84,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($link->query($sql) === TRUE) {
         echo "<p>New record created successfully</p>";
     } else {
-    $conn->close();
+    $link->close();
     }
 }
 ?>
