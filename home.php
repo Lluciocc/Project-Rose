@@ -76,7 +76,7 @@ $rosetotal = "SELECT SUM(roses) FROM commandes";
 </body>
 </html>
 <?php
-
+echo $rosetotal;
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $prenom=$_POST['prenom'];  
