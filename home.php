@@ -38,21 +38,14 @@ if (!isset($_SESSION["mdp"])){
     <div id="order-tab">
         <p>Prendre une commande</p>
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideOrder()">
-<<<<<<< Updated upstream
+
         <form method="post" name="command" id="form-order">
             <input type="text" id="prenom" name="prenom" placeholder="Prénom">
             <input type="text" id="nom" name="nom" placeholder="Nom">
             <input type="text" id="roses" name="roses" placeholder="Nombre de roses">
             <input type="text" id="horaire" name="horaire" placeholder="Horaires">
             <input type="text" id="salle" name="salle" placeholder="Salle de classe">
-=======
-        <form method="post" id="form-order">
-            <input type="text" id="prenom" placeholder="Prénom">
-            <input type="text" id="nom" placeholder="Nom">
-            <input type="text" id="roses" placeholder="Nombre de roses">
-            <input type="text" id="horaire" placeholder="Horaires">
-            <input type="text" id="salle" placeholder="Salle de classe">
->>>>>>> Stashed changes
+
             <input type="submit" id="submit2" placeholder="Submit">
         </form>
     </div>
@@ -75,7 +68,6 @@ if (!isset($_SESSION["mdp"])){
         <input class="icon-list" id='icon-bar' type="image" src="Images/Icon/menu.png" alt="Icone liste" style="width: 100px;" >
     </footer>
 </body>
-<<<<<<< Updated upstream
 </html>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -101,6 +93,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 }
 ?>
-=======
 </html>
->>>>>>> Stashed changes
