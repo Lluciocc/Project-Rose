@@ -1,11 +1,16 @@
-
 <?php
 session_start();
 if (!isset($_SESSION["mdp"])){
 ?>
     <script>window.location.href = "https://spcrose.fr/login"</script>
-<?php    
+<?php
 }
+$mysqli = new mysqli("database-5015086731.app-ionos.space");
+$mysqli->select_db("dbs12526631");
+if (!$link) {
+    die('Could not connect: ');
+}
+echo 'Connected successfully';
 ?>
 <!DOCTYPE html>
 <html>
