@@ -13,22 +13,20 @@ if ($link->connect_error) {
   echo '<p>Connexion au serveur MySQL établie avec succès.</p>';
 }
 
-if(isset($_POST['command'])) {
-    $prenom=$_POST['prenom'];
-    $nom=$_POST['nom'];
-    $roses=$_POST['roses'];
-    $horaires=$_POST['horaires']; 
-    $salle=$_POST['salle'];
 
-    $sql = "INSERT INTO commandes (nom,prenom,horaire,salle,roses)
-    VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')";
+$prenom=$_POST['prenom'];  
+$nom=$_POST['nom'];
+$roses=$_POST['roses'];
+$horaires=$_POST['horaires']; 
+$salle=$_POST['salle'];
 
-    if ($conn->query($sql) === TRUE) {
+$sql = "INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')";
+
+if ($conn->query($sql) === TRUE) {
             echo "Records updated: ";
-        } else {
-            echo "Error: ".$sql."<br>".$conn->error;
-        }
-
-    $conn->close();
-}?>
+    } else {
+        echo "Error: ".$sql."<br>".$conn->error;
+    }
+$conn->close();
+?>
 <script>window.location.href = "https://spcrose.fr/home"</script>
