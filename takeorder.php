@@ -19,8 +19,8 @@ $nom=$_POST['nom'];
 $roses=$_POST['roses'];
 $horaire=$_POST['horaire']; 
 $salle=$_POST['salle'];
-
-$result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')");
+echo $nom, $prenom, $horaire,$salle,$roses;
+$result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')");
 
 if ($result === TRUE) {
         echo "Records updated: ";
