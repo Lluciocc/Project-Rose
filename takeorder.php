@@ -7,23 +7,24 @@ $db = $IONOS_DB_NAME;
 $dbconnect=mysqli_connect($hostname,$username,$password,$db,3306);
 
 if ($dbconnect->connect_error) {
-  die("Database connection failed: " . $dbconnect->connect_error);
+    die("Database connection failed: " . $dbconnect->connect_error);
 }
 
 if(isset($_POST['command'])) {
-  $prenom=$_POST['prenom'];
-  $nom=$_POST['nom'];
-  $roses=$_POST['roses'];
-  $horaires=$_POST['horaires'];
-  $salle=$_POST['salle'];
+    $prenom=$_POST['prenom'];
+    $nom=$_POST['nom'];
+    $roses=$_POST['roses'];
+    $horaires=$_POST['horaires'];
+    $salle=$_POST['salle'];
 
-  $query = "INSERT INTO commandes (nom,prenom,horaire,salle,roses)
-  VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')";
+    $sql = "INSERT INTO commandes (nom,prenom,horaire,salle,roses)
+    VALUES ('$nom', '$prenom', '$horaires','$salle','$roses')";
 
-    if (!mysqli_query($dbconnect, $query)) {
-        die('An error occurred. Your review has not been submitted.');
-    } else {
-      echo "Thanks for your review.";
-    }
+    if ($conn->query($sql) === TRUE) {
+            echo "Records updated: ".$student_id."-".$name."-".$age."-".$gender;
+        } else {
+            echo "Error: ".$sql."<br>".$conn->error;
+        }
+
+    $conn->close();
 }
-?>
