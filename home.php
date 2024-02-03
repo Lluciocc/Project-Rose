@@ -12,7 +12,8 @@ $password = 'spcWeLoveRosesSkibidi57';
 
 $link = new mysqli($host_name, $user_name, $password, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
-$rosefetch = settype($rosequery->fetch_assoc()["SUM(roses)"],"int");
+$rosefetch = rosequery->fetch_assoc()["SUM(roses)"];
+settype($rosefetch,"int");
 ?>
 <!DOCTYPE html>
 <html>
