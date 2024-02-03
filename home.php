@@ -5,7 +5,7 @@ if (!isset($_SESSION["mdp"])){
     <script>window.location.href = "https://spcrose.fr/login"</script>
 <?php
 }
-
+exit();
 $hostname = $IONOS_DB_HOST;
 $username = "$IONOS_DB_USERNAME";
 $password = "$IONOS_DB_PASSWORD";
