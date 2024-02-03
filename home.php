@@ -5,7 +5,13 @@ if (!isset($_SESSION["mdp"])){
     <script>window.location.href = "https://spcrose.fr/login"</script>
 <?php
 }
+$host_name = 'db5015066517.hosting-data.io';
+$database = 'dbs12511800';
+$user_name = 'dbu72595';
+$password = 'spcWeLoveRosesSkibidi57';
 
+$link = new mysqli($host_name, $user_name, $password, $database,3306);
+$rosetotal = 1500-"SELECT SUM(roses) FROM commandes";
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,7 +65,7 @@ if (!isset($_SESSION["mdp"])){
         <input class="icon-rose" type="image" src="Images/Icon/icon-rose.png" alt="Icone rose">
         <div>
             <p>STOCK DE ROSES</p>
-            <p class="count">1500</p>
+            <p class="count">$rosetotal</p>
         </div>
     </div>
 
@@ -70,13 +76,8 @@ if (!isset($_SESSION["mdp"])){
 </body>
 </html>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $host_name = 'db5015066517.hosting-data.io';
-    $database = 'dbs12511800';
-    $user_name = 'dbu72595';
-    $password = 'spcWeLoveRosesSkibidi57';
 
-    $link = new mysqli($host_name, $user_name, $password, $database,3306);
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $prenom=$_POST['prenom'];  
     $nom=$_POST['nom'];
@@ -87,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
 
     if ($link->query($sql) === TRUE) {
-        echo "<p>New record created successfully</p>";
+        echo "New record created successfully";
     } else {
     $link->close();
     }
