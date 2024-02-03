@@ -68,7 +68,7 @@ if (!isset($_SESSION["mdp"])){
 </body>
 </html>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $host_name = 'db5015066517.hosting-data.io';
     $database = 'dbs12511800';
     $user_name = 'dbu72595';
@@ -89,4 +89,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
     $conn->close();
     }
+}
 ?>
