@@ -81,11 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $roses=$_POST['roses'];
     $horaire=$_POST['horaire']; 
     $salle=$_POST['salle'];
-    echo "<div> POST BODY <br>"; 
-    print_r($_POST); 
-    echo "</div>"; 
-    $result = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')");
 
+    $sql = $conn->query("INSERT INTO commandes (nom,prenom,horaire,salle,roses) VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')");
+    
     
     $conn->close();
     }
