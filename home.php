@@ -66,7 +66,7 @@ $rosefetch = settype($rosequery->fetch_assoc()["SUM(roses)"],"int");
         <input class="icon-rose" type="image" src="Images/Icon/icon-rose.png" alt="Icone rose">
         <div>
             <p>STOCK DE ROSES</p>
-            <p class="count"><?php echo $rosefetch?></p>
+            <p class="count"><?php echo $rosefetch;?></p>
         </div>
     </div>
 
