@@ -11,7 +11,7 @@ $username = "$IONOS_DB_USERNAME";
 $password = "$IONOS_DB_PASSWORD";
 $db = $IONOS_DB_NAME;
 
-$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+$dbconnect=mysqli_connect($hostname,$username,$password,$db,3306);
 
 if ($dbconnect->connect_error) {
   die("Database connection failed: " . $dbconnect->connect_error);
