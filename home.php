@@ -15,8 +15,8 @@ $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
 $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
 settype($rosefetch,"int");
 
-$allcommands = $link->query("SELECT * FROM commandes ORDER BY horaire");
-$rows = $allcommands->fetch_all(MYSQLI_ASSOC);
+$allcommands = $link->query("SELECT * FROM commandes ORDER BY horaires");
+$rows = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,11 +64,11 @@ $rows = $allcommands->fetch_all(MYSQLI_ASSOC);
     <div id="delivery-tab">
     <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
-        <?php 
+        <p class="count"><?php 
         foreach ($rows as $row) {
-            ?><p class = "count"><?php echo $row["nom"],$row["prenom"],$row["horaire"],$row["salle"]?><p>
-        <?php}
-        ?>
+            echo $row["prenom"], $row["nom"],"---",$row["salle"],$row["horaire"],"\n";
+        }
+        ?></p>
     </div>
 
     <div id="stock-rose">
