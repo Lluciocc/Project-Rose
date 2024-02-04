@@ -14,6 +14,7 @@ $link = new mysqli($host_name, $user_name, $password, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
 $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
 settype($rosefetch,"int");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,14 +47,14 @@ settype($rosefetch,"int");
     <div id="order-tab">
         <p>Prendre une commande</p>
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideOrder()">
-
+        
         <form method="post" name="command" id="form-order">
             <input type="text" id="prenom" name="prenom" placeholder="Prénom">
             <input type="text" id="nom" name="nom" placeholder="Nom">
             <input type="text" id="roses" name="roses" placeholder="Nombre de roses">
             <input type="text" id="horaire" name="horaire" placeholder="Horaires">
             <input type="text" id="salle" name="salle" placeholder="Salle de classe">
-
+            
             <input type="submit" id="submit2" placeholder="Submit">
         </form>
     </div>
@@ -86,13 +87,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $roses=$_POST['roses'];
     $horaire=$_POST['horaire']; 
     $salle=$_POST['salle'];
+    if ($roses > 3 || $roses < 0){
+        echo "Nombre de roses invalide !";
+    } else{
+        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
 
-    $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
-
-    if ($link->query($sql) === TRUE) {
-        echo "Nouvelle commande ajoutée !";
-    } else {
-    $link->close();
+        if ($link->query($sql) === TRUE) {
+            echo "Nouvelle commande ajoutée !";
+        } else {
+        $link->close();
+        }
     }
+    
 }
 ?>
+
