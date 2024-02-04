@@ -64,11 +64,6 @@ $rows = $allcommands->fetch_all(MYSQLI_ASSOC);
     <div id="delivery-tab">
     <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
-        <p class="count"><?php 
-        foreach ($rows as $row) {
-            printf($row["prenom"], $row["nom"],"---",$row["salle"],$row["horaire"],"\n");
-        }
-        ?></p>
     </div>
 
     <div id="stock-rose">
