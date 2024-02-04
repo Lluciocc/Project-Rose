@@ -50,9 +50,9 @@ $sallefetch = $allcommands->fetch_assoc()["salle"];
     </div>
 
     <div id="order-tab">
-        <p>Prendre une commande</p>
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideOrder()">
-        
+        <p>Prendre une commande</p>
+
         <form method="post" name="command" id="form-order">
             <input type="text" id="prenom" name="prenom" placeholder="Prénom">
             <input type="text" id="nom" name="nom" placeholder="Nom">
@@ -65,8 +65,8 @@ $sallefetch = $allcommands->fetch_assoc()["salle"];
     </div>
 
     <div id="delivery-tab">
+    <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
-        <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p class="count"><?php echo $nomfetch,$prenomfetch,$horairefetch,$sallefetch;?></p>
     </div>
 
