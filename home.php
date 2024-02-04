@@ -16,7 +16,7 @@ $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
 settype($rosefetch,"int");
 
 $allcommands = $link->query("SELECT * FROM commandes ORDER BY horaires");
-$rows = $result->fetch_all(MYSQLI_ASSOC);
+$rows = $allcommands->fetch_all(MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
