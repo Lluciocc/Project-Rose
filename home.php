@@ -67,7 +67,7 @@ $sallefetch = $allcommands->fetch_assoc()["salle"];
     <div id="delivery-tab">
     <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
-        <p class="count"><?php echo $nomfetch,$prenomfetch,$horairefetch,$sallefetch;?></p>
+        <p class="count"><?php echo $nomfetch;?></p>
     </div>
 
     <div id="stock-rose">
