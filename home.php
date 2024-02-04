@@ -15,6 +15,11 @@ $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
 $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
 settype($rosefetch,"int");
 
+$allcommands = $link->query("SELECT * FROM commandes");
+$nomfetch = $allcommands->fetch_assoc()["nom"];
+$prenomfetch = $allcommands->fetch_assoc()["prenom"];
+$horairefetch = $allcommands->fetch_assoc()["horaire"];
+$sallefetch = $allcommands->fetch_assoc()["salle"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,6 +67,7 @@ settype($rosefetch,"int");
     <div id="delivery-tab">
         <p>Livrer une commande</p>
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
+        <p class="count"><?php echo $nomfetch,$prenomfetch,$horairefetch,$sallefetch;?></p>
     </div>
 
     <div id="stock-rose">
