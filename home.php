@@ -66,7 +66,7 @@ $rows = $allcommands->fetch_all(MYSQLI_ASSOC);
         <p>Livrer une commande</p>
         <p class="count"><?php 
         foreach ($rows as $row) {
-            echo $row["prenom"], $row["nom"],"---",$row["salle"],$row["horaire"],"\n";
+            printf($row["prenom"], $row["nom"],"---",$row["salle"],$row["horaire"],"\n");
         }
         ?></p>
     </div>
