@@ -66,7 +66,7 @@ settype($rosefetch,"int");
     <div id="delivery-tab">
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
-        <p><?php echo $nomfetch;?></p>
+        <p><?php echo $nomfetch[0];?></p>
     </div>
 
     <div id="stock-rose">
