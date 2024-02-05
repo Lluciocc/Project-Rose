@@ -14,7 +14,7 @@ $link = new mysqli($host_name, $user_name, $password, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
 $rowquery  = $link->query("SELECT * FROM commandes ORDER BY horaire");
 $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
-$nomfetch  = $rowquery->fetch_assoc();
+$nomfetch  = $rowquery->fetch_all();
 
 settype($rosefetch,"int");
 
