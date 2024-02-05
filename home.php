@@ -17,9 +17,7 @@ settype($rosefetch,"int");
 
 $allcommands = $link->query("SELECT * FROM commandes ORDER BY horaires");
 $rows = $allcommands->fetch_all(MYSQLI_ASSOC);
-foreach ($rows as $row){
-    echo $row["nom"], $row["prenom"],$row["salle"],$row["horaire"];
-}
+echo $rows;
 ?>
 <!DOCTYPE html>
 <html>
