@@ -67,7 +67,9 @@ settype($rosefetch,"int");
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
         <p><?php foreach ($rows as $row){
-            var_dump($row);
+                foreach($row as $key=>$value){
+                    var_dump($value);
+                }
             echo '<br />';
             }?></p>
     </div>
