@@ -59,6 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $link->close();
         }
     }
-    
+    ?>
+    <script> window.location.href = "https://spcrose.fr/home" </script>
+    <?php 
 }
 ?>

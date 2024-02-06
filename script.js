@@ -2,10 +2,10 @@
 
 function showOrder() {
     var order = document.getElementById("order-tab").style.display = "flex";
-    window.location.href = "https://spcrose.fr/takeorder.php";
+    window.location.href = "https://spcrose.fr/takeorder";
 }
 function hideOrder() {
-    window.location.href = "https://spcrose.fr/home.php";
+    window.location.href = "https://spcrose.fr/home";
 }
 
 function showDelivery() {
