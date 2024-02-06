@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($roses > 3 || $roses < 0){
         echo "Nombre de roses invalide !";
     } else{
-        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
+        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses',DEFAULT)";
 
         if ($link->query($sql) === TRUE) {
             echo "Nouvelle commande ajoutée !";
