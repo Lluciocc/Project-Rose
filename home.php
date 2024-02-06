@@ -14,7 +14,6 @@ $link = new mysqli($host_name, $user_name, $inf, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
 $rowquery  = $link->query("SELECT * FROM commandes ORDER BY horaire");
 $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
-$roselivre = $link->query("SELECT totroses FROM roselivre WHERE id = 667");
 $rows  = $rowquery->fetch_all();
 
 settype($rosefetch,"int");
@@ -85,7 +84,7 @@ settype($rosefetch,"int");
         <input class="icon-rose" type="image" src="Images/Icon/icon-rose.png" alt="Icone rose">
         <div>
             <p>STOCK DE ROSES</p>
-            <p class="count"><?php echo 1500-$rosefetch-$roselivre;?></p>
+            <p class="count"><?php echo 1500-$rosefetch;?></p>
         </div>
     </div>
 
@@ -101,15 +100,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $id=$_POST['send'];
     settype($id,"int");
-    $sql = "DELETE FROM commandes WHERE id = $id";
+    $sql = "DELETE FROM commandes WHERE id = $id; UPDATE commandes SET roses = roses + (SELECT roses FROM commandes WHERE id = $id) WHERE id = 63329";
 
-    if ($link->query($sql) === TRUE) {
+    if ($link->multi_query($sql) === TRUE) {
         echo "Commande livrée !";
     } else {
         $link->close();
     }
-    $link = new mysqli($host_name, $user_name, $inf, $database,3306);
-    $sql = "UPDATE roses SET totroses = totroses + (SELECT roses FROM commandes WHERE id = $id) WHERE id = 667";
-    $link->query($sql);
-    }
+}
 ?>
