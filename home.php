@@ -55,7 +55,7 @@ settype($rosefetch,"int");
                 foreach($row as $key => $value){
                     if ($key != 5){
                         echo $value, "  ";
-                    } elseif ($value == null or $value != "00:00:00" or $value != "0"){
+                    } elseif ($value == null or $value == "00:00:00" or $value == "0"){
                         break;
                     }
                 }
