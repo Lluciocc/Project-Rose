@@ -48,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $roses=$_POST['roses'];
     $horaire=$_POST['horaire']; 
     $salle=$_POST['salle'];
-    if ($roses > 3 || $roses < 0){
-        echo "Nombre de roses invalide !";
+    if ($roses > 3 || $roses <= 0 || $horaire == "00:00:00"){
+        echo "Nombre de roses invalide !/Horaire invalide";
     } else{
         $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses',DEFAULT)";
 
@@ -58,9 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         } else {
         $link->close();
         }
-    }
-    ?>
+    }?>
     <script> window.location.href = "https://spcrose.fr/home" </script>
-    <?php 
+    <?php
 }
 ?>

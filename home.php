@@ -62,6 +62,12 @@ settype($rosefetch,"int");
                     }
                 }
             }?></p>
+        <div id="delivery-send">
+            <form method="post" id="sendform">
+                <input id="send" type="number" name="send">
+                <input class="submit" type="submit" value="LOGIN">
+            </form>
+        </div>
     </div>
 
     <div id="stock-rose">
@@ -82,23 +88,14 @@ settype($rosefetch,"int");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $prenom=$_POST['prenom'];  
-    $nom=$_POST['nom'];
-    $roses=$_POST['roses'];
-    $horaire=$_POST['horaire']; 
-    $salle=$_POST['salle'];
-    if ($roses > 3 || $roses <= 0 || $horaire == "00:00:00"){
-        echo "Nombre de roses invalide !/Horaire invalide";
-    } else{
-        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses',DEFAULT)";
+    $id=$_POST['send'];
 
-        if ($link->query($sql) === TRUE) {
-            echo "Nouvelle commande ajoutée !";
-        } else {
+    $sql = "DELETE FROM commandes WHERE id = $id";
+
+    if ($link->query($sql) === TRUE) {
+        echo "Nouvelle commande ajoutée !";
+    } else {
         $link->close();
-        }
     }
-    
-}
+    }
 ?>
-

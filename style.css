@@ -195,6 +195,15 @@ h1 {
     background-color: #FBF3F1;
     border-radius: 8px;
 }
+#delivery-send {
+    width: 90%;
+    height: 10%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+}
 
 #order-tab header, #delivery-tab header {
     width: 100%;
