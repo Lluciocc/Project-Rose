@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $id=$_POST['send'];
     settype($id,"int");
-    $sql = "DELETE FROM commandes WHERE id = $id; UPDATE commandes SET roses = roses + (SELECT roses FROM commandes WHERE id = $id) WHERE id = 63329";
+    $sql = "DELETE FROM commandes WHERE id = $id; UPDATE commandes SET roses = roses + (SELECT roses FROM commandes WHERE id = $id) WHERE id = 63329;";
 
     if ($link->multi_query($sql) === TRUE) {
         echo "Commande livrée !";

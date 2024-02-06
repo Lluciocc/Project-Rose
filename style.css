@@ -227,6 +227,8 @@ h1 {
     width: 40px;
     height: auto;
     margin-right: 20px;
+    margin-top: 5%;
+    margin-left: 5%	;
 }
 
 #order-tab form {
