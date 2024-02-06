@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $roses=$_POST['roses'];
     $horaire=$_POST['horaire']; 
     $salle=$_POST['salle'];
-    if ($roses > 3 || $roses <= 0 || $horaire == "00:00:00" || $nom == "" || $prenom == "" || $salle == 0){
+    if ($roses > 3 || $roses <= 0 || $horaire == "00:00:00"){
         echo "Commande invalide";
     } else{
         $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses',DEFAULT)";
