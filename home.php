@@ -48,7 +48,6 @@ settype($rosefetch,"int");
         <p>Livrer une commande</p>
     </div>
 
-
     <div id="delivery-tab">
         <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <p>Livrer une commande</p>
@@ -75,5 +74,27 @@ settype($rosefetch,"int");
     </footer>
 </body>
 </html>
+<?php
 
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    $prenom=$_POST['prenom'];  
+    $nom=$_POST['nom'];
+    $roses=$_POST['roses'];
+    $horaire=$_POST['horaire']; 
+    $salle=$_POST['salle'];
+    if ($roses > 3 || $roses < 0){
+        echo "Nombre de roses invalide !";
+    } else{
+        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
+
+        if ($link->query($sql) === TRUE) {
+            echo "Nouvelle commande ajoutée !";
+        } else {
+        $link->close();
+        }
+    }
+    
+}
+?>
 

@@ -1,7 +1,6 @@
 //Page HOME
 
 function showOrder() {
-    var order = document.getElementById("order-tab").style.display = "flex";
     window.location.href = "https://spcrose.fr/takeorder";
 }
 function hideOrder() {

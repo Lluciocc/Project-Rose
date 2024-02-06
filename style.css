@@ -168,7 +168,7 @@ h1 {
 #order-tab, #delivery-tab {
     width: 95%;
     height: 70%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
