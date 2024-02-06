@@ -49,25 +49,28 @@ settype($rosefetch,"int");
     </div>
 
     <div id="delivery-tab">
-        <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
-        <p>Livrer une commande</p>
-        <p><?php foreach ($rows as $row){
-                foreach($row as $key => $value){
-                    if ($row[3] != 0){
-                        if (!in_array($key, array(4,5))){
-                            echo $value, "  ";
-                        } 
-                        elseif ($key == 4){
-                            echo $value, " roses ";
+        <div id="delivery-subtab">
+            <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
+            <p>Livrer une commande</p>
+            <p><?php foreach ($rows as $row){
+                    foreach($row as $key => $value){
+                        if ($row[3] != 0){
+                            if (!in_array($key, array(4,5))){
+                                echo $value, "  ";
+                            } 
+                            elseif ($key == 4){
+                                echo $value, " roses ";
+                            }
+                            elseif ($key == 5){
+                                echo "(ID : ",$value,")";
+                                echo '<br />';
+                            }
                         }
-                        elseif ($key == 5){
-                            echo "(ID : ",$value,")";
-                            echo '<br />';
-                        }
+                        
                     }
-                    
-                }
-            }?></p>
+                }?>
+            </p>
+        </div>
         <div id="delivery-send">
             <form method="post" id="sendform">
                 <input id="send" type="number" name="send">
@@ -93,7 +96,7 @@ settype($rosefetch,"int");
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    
+
     $id=$_POST['send'];
     settype($id,"int");
     $sql = "DELETE FROM commandes WHERE id = $id";
