@@ -54,7 +54,7 @@ settype($rosefetch,"int");
         <p><?php foreach ($rows as $row){
                 foreach($row as $key => $value){
                     if ($key != "id"){
-                        echo $value, "  ";
+                        echo $key,$value, "  ";
                     }   
                 }
             echo " roses";
