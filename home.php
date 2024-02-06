@@ -58,9 +58,9 @@ settype($rosefetch,"int");
                     } 
                     elseif ($key == 4 && $row[3] != 0){
                         echo $value, " roses";
+                        echo '<br />';
                     }
                 }
-            echo '<br />';
             }?></p>
     </div>
 
