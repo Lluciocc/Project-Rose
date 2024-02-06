@@ -8,9 +8,9 @@ if (!isset($_SESSION["mdp"])){
 $host_name = 'db5015066517.hosting-data.io';
 $database = 'dbs12511800';
 $user_name = 'dbu72595';
-$password = 'spcWeLoveRosesSkibidi57';
+$inf = 'spcWeLoveRosesSkibidi57';
 
-$link = new mysqli($host_name, $user_name, $password, $database,3306);
+$link = new mysqli($host_name, $user_name, $inf, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
 $rowquery  = $link->query("SELECT * FROM commandes ORDER BY horaire");
 $rosefetch = $rosequery->fetch_assoc()["SUM(roses)"];
@@ -55,7 +55,9 @@ settype($rosefetch,"int");
                 foreach($row as $key => $value){
                     if ($key != 5){
                         echo $value, "  ";
-                    }   
+                    } elseif ($value == null or $value != "00:00:00" or $value != "0"){
+                        break;
+                    }
                 }
             echo " roses";
             echo '<br />';
