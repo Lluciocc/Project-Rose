@@ -101,14 +101,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $id=$_POST['send'];
     settype($id,"int");
-    $roseremove = "SELECT roses FROM commandes WHERE id = $id";
-    $sql = "DELETE FROM commandes WHERE id = $id;
-            UPDATE roses SET totroses = totroses + $roseremove WHERE id = 667";
+    $sql = "DELETE FROM commandes WHERE id = $id";
 
-    if ($link->query($roseremove) === TRUE && $link->query($sql) === TRUE) {
+    if ($link->query($sql) === TRUE) {
         echo "Commande livrée !";
     } else {
         $link->close();
     }
+    $link = new mysqli($host_name, $user_name, $inf, $database,3306);
+    $sql = "UPDATE roses SET totroses = totroses + (SELECT roses FROM commandes WHERE id = $id) WHERE id = 667";
+    $link->query($sql);
     }
 ?>
