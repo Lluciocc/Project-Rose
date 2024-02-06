@@ -49,7 +49,7 @@ settype($rosefetch,"int");
     </div>
 
     <div id="delivery-tab">
-    <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
+        <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
         <div id="delivery-send">
             <form method="post" id="sendform">
                 <input id="send" type="number" name="send">
