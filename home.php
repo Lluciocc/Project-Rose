@@ -58,7 +58,7 @@ settype($rosefetch,"int");
                             echo $value, "  ";
                         } 
                         elseif ($key == 4){
-                            echo $value, " roses";
+                            echo $value, " roses ";
                         }
                         elseif ($key == 5){
                             echo "(ID : ",$value,")";
@@ -71,7 +71,7 @@ settype($rosefetch,"int");
         <div id="delivery-send">
             <form method="post" id="sendform">
                 <input id="send" type="number" name="send">
-                <input class="submit" type="submit" value="LOGIN">
+                <input class="submit" type="submit" value="Send">
             </form>
         </div>
     </div>
@@ -93,13 +93,13 @@ settype($rosefetch,"int");
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
+    
     $id=$_POST['send'];
-
+    settype($id,"int");
     $sql = "DELETE FROM commandes WHERE id = $id";
 
     if ($link->query($sql) === TRUE) {
-        echo "Nouvelle commande ajoutée !";
+        echo "Commande livrée !";
     } else {
         $link->close();
     }
