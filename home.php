@@ -53,14 +53,16 @@ settype($rosefetch,"int");
         <p>Livrer une commande</p>
         <p><?php foreach ($rows as $row){
                 foreach($row as $key => $value){
-                    if ($value == null or $value == "00:00:00" or $value == "0"){
+                    if ($value == null || $value == "00:00:00" || $value == "0"){
                         break;
                     }
-                    elseif ($key != 5){
+                    elseif (!in_array($key, array(4,5))){
                         echo $value, "  ";
                     } 
+                    elseif ($key == 4){
+                        echo $value, " roses";
+                    }
                 }
-            echo " roses";
             echo '<br />';
             }?></p>
     </div>
