@@ -101,10 +101,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $id=$_POST['send'];
     settype($id,"int");
+    $roseremove = "SELECT roses FROM commandes WHERE id = $id";
     $sql = "DELETE FROM commandes WHERE id = $id;
-            UPDATE roselivre SET totroses = totroses + (SELECT roses FROM commandes WHERE id = $id) WHERE id = 667";
+            UPDATE roses SET totroses = totroses + $roseremove WHERE id = 667";
 
-    if ($link->query($sql) === TRUE) {
+    if ($link->query($roseremove) === TRUE && $link->query($sql) === TRUE) {
         echo "Commande livrée !";
     } else {
         $link->close();
