@@ -183,7 +183,7 @@ h1 {
     width: 95%;
     height: 70%;
     display: none;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
     overflow-x: hidden;
     overflow-y: auto;

@@ -49,8 +49,14 @@ settype($rosefetch,"int");
     </div>
 
     <div id="delivery-tab">
+    <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
+        <div id="delivery-send">
+            <form method="post" id="sendform">
+                <input id="send" type="number" name="send">
+                <input class="submit" type="submit" value="Send">
+            </form>
+        </div>
         <div id="delivery-subtab">
-            <input class="icon-cross" type="image" src="Images/Icon/icon-cross.png" alt="Icone croix" onclick="hideDelivery()">
             <p>Livrer une commande</p>
             <p><?php foreach ($rows as $row){
                     foreach($row as $key => $value){
@@ -71,12 +77,7 @@ settype($rosefetch,"int");
                 }?>
             </p>
         </div>
-        <div id="delivery-send">
-            <form method="post" id="sendform">
-                <input id="send" type="number" name="send">
-                <input class="submit" type="submit" value="Send">
-            </form>
-        </div>
+        
     </div>
 
     <div id="stock-rose">
