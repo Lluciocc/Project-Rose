@@ -32,8 +32,5 @@ if (password_verify($_POST["password"],$blfk)){
     </form>
 
 </body>
-
-
-
 </html>
 

@@ -53,7 +53,9 @@ settype($rosefetch,"int");
         <p>Livrer une commande</p>
         <p><?php foreach ($rows as $row){
                 foreach($row as $key => $value){
-                    echo $value, "  ";
+                    if $key != "id"{
+                        echo $value, "  ";
+                    }   
                 }
             echo " roses";
             echo '<br />';
@@ -86,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($roses > 3 || $roses < 0){
         echo "Nombre de roses invalide !";
     } else{
-        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses')";
+        $sql = "INSERT INTO commandes VALUES ('$nom', '$prenom', '$horaire','$salle','$roses',DEFAULT)";
 
         if ($link->query($sql) === TRUE) {
             echo "Nouvelle commande ajoutée !";
