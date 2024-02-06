@@ -56,7 +56,7 @@ settype($rosefetch,"int");
                     if (!in_array($key, array(4,5)) && $row[3] != 0){
                         echo $value, "  ";
                     } 
-                    elseif ($key == 4){
+                    elseif ($key == 4 && $row[3] != 0){
                         echo $value, " roses";
                     }
                 }
