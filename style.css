@@ -247,6 +247,10 @@ h1 {
     height: 6%;
 }
 
+#order-tab form select {
+    width: 15%;
+}
+
 #stock-rose {
     width: 100%;
     justify-self: start;
