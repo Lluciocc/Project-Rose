@@ -31,11 +31,12 @@ $link = new mysqli($host_name, $user_name, $password, $database,3306);
             <input type="text" id="prenom" name="prenom" placeholder="Prénom">
             <input type="text" id="nom" name="nom" placeholder="Nom">
             <input type="text" id="roses" name="roses" placeholder="Nombre de roses">
-            <input type="select" id="horaire" name="horaire" placeholder="Horaires">
+            <select type="text" id="horaire" name="horaire" placeholder="Horaires">
                 <option value="13:45:00">13:45:00</option>
                 <option value="14:45:00">14:45:00</option>
                 <option value="15:50:00">15:50:00</option>
                 <option value="16:50:00">16:50:00</option>
+            </select>
             <input type="text" id="salle" name="salle" placeholder="Salle de classe">
             
             <input type="submit" id="submit2" placeholder="Submit">
