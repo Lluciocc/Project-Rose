@@ -243,7 +243,7 @@ h1 {
     gap: 10%;
 }
 
-#order-tab form input, #order-tab form submit {
+#order-tab form input, #order-tab form submit, #order-tab form select {
     height: 6%;
 }
 
