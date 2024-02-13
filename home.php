@@ -84,7 +84,7 @@ settype($rosefetch,"int");
         <input class="icon-rose" type="image" src="Images/Icon/icon-rose.png" alt="Icone rose">
         <div>
             <p>STOCK DE ROSES</p>
-            <p class="count"><?php echo 1500-$rosefetch;?></p>
+            <p class="count"><?php echo 0;?></p>
         </div>
     </div>
 
