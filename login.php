@@ -1,6 +1,6 @@
 <?php
 session_start();
-$blfk = '$2y$10$XkV0TeIOs87PTwBGlIT3neOAKfgARc.8nk.n\KAGvNrSfB89JWagO';
+$blfk = '$2y$10$FnvZ5hmmSmetOkP6RVyle.SiDxlHnKwNtXLMytqctVKBvRV2v8mnK';
 if (password_verify($_POST["password"],$blfk)){
     $_SESSION["mdp"] = True;
 ?>
