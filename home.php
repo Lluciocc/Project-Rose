@@ -38,10 +38,10 @@ settype($rosefetch,"int");
         <h1 class="user">User</h1>
     </div>
 
-    <div id="take-order" onclick="showOrder()">
+    <!-----------   <div id="take-order" onclick="showOrder()">
         <div class="barre"></div>
         <p>Prendre une commande</p>
-    </div>
+    </div>------->
 
     <div id="delivery-order" onclick="showDelivery()">
         <div class="barre"></div>
