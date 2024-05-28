@@ -5,10 +5,10 @@ if (!isset($_SESSION["mdp"])){
     <script>window.location.href = "https://spcrose.fr/login"</script>
 <?php
 }
-$host_name = 'db5015066517.hosting-data.io';
-$database = 'dbs12511800';
-$user_name = 'dbu72595';
-$inf = 'spcWeLoveRosesSkibidi57';
+$host_name = 'x.hosting-data.io';
+$database = 'x';
+$user_name = 'x';
+$inf = 'x';
 
 $link = new mysqli($host_name, $user_name, $inf, $database,3306);
 $rosequery = $link->query("SELECT SUM(roses) FROM commandes");
