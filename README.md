@@ -1,5 +1,8 @@
 # Project-Rose
 
-Ce projet a pour but la mise en place d'un site accessible aux vendeurs de la vente des roses, à l'occasion de la Saint Valentin dans un établissement scolaire. Son interface est constituée d'un login, menant à l'organisation des commandes. Le site est alors connecté à une base de données contenant toutes les informations sur chaque commande
+> [!IMPORTANT]  
+> Ce projet n'est plus en ligne, car il a été développé rapidement pour février 2023. Merci de votre compréhension.  
 
-https://spcrose.fr/login
+Project-Rose est un site web conçu pour faciliter la vente de roses à l'occasion de la Saint-Valentin dans un établissement scolaire. Son interface propose un système de connexion permettant d’accéder à l'organisation des commandes. Le site est relié à une base de données qui centralise toutes les informations relatives aux commandes.  
+
+🔗 **Lien d’accès (hors ligne)** : [spcrose.fr/login](https://spcrose.fr/login)
